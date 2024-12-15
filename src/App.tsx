@@ -1,21 +1,18 @@
-import { useState } from 'react';
 import './App.css';
+import { BrowserRouter, useRoutes } from 'react-router-dom';
+import routes from './router';
+
+// 路由组件
+function RouterComponent() {
+  const element = useRoutes(routes);
+  return element;
+}
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div className="text-sm"></div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    <BrowserRouter>
+      <RouterComponent />
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,13 @@
+{
+  "posts": {
+    "data": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "author": "admin"
+      }
+    ],
+    "code": 0,
+    "message": "success"
+  }
+}
